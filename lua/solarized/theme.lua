@@ -304,6 +304,7 @@ theme.loadPlugins = function()
 		GitSignsDelete = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteNr = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteLn = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
+        GitSignsCurrentLineBlame = {fg = solarized.base01},
 
 		-- Telescope
 		TelescopePromptBorder = { fg = solarized.cyan },
