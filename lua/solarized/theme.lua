@@ -265,6 +265,11 @@ theme.loadPlugins = function()
 
 	local plugins = {
 
+		AlphaHeader = { fg = solarized.cyan },
+		AlphaFooter = { fg = solarized.magenta },
+		AlphaShortcut = { fg = solarized.green },
+		AlphaButtons = { fg = solarized.blue },
+
 		-- LspTrouble
 		LspTroubleText = { fg = solarized.text },
 		LspTroubleCount = { fg = solarized.purple, bg = solarized.active },
@@ -304,7 +309,7 @@ theme.loadPlugins = function()
 		GitSignsDelete = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteNr = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteLn = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
-        GitSignsCurrentLineBlame = {fg = solarized.base01},
+		GitSignsCurrentLineBlame = { fg = solarized.base01 },
 
 		-- Telescope
 		TelescopePromptBorder = { fg = solarized.cyan },
