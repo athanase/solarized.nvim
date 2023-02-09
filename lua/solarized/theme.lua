@@ -9,7 +9,7 @@ theme.loadSyntax = function()
         Type = { fg = solarized.magenta }, -- int, long, char, etc.
         StorageClass = { fg = solarized.orange }, -- static, register, volatile, etc.
         Structure = { fg = solarized.magenta }, -- struct, union, enum, etc.
-        Constant = { fg = solarized.green }, -- any constant
+        Constant = { fg = solarized.blue }, -- any constant
         String = { fg = solarized.yellow, bg = solarized.none }, -- Any string
         Character = { fg = solarized.violet }, -- any character constant: 'c', '\n'
         Number = { fg = solarized.red }, -- a number constant: 5
@@ -48,6 +48,8 @@ theme.loadSyntax = function()
         markdownH1Delimiter = { fg = solarized.cyan },
         markdownH2Delimiter = { fg = solarized.red },
         markdownH3Delimiter = { fg = solarized.green },
+        cmakeArguments = { fg = solarized.blue },
+        cmakeGeneratorExpressions = { fg = solarized.green },
     }
 
     -- Options:
@@ -130,9 +132,31 @@ theme.loadEditor = function()
         DashboardHeader = { fg = solarized.grey },
         DashboardCenter = { fg = solarized.grey },
         DashboardFooter = { fg = solarized.green },
-    }
 
-    -- Options:
+        DiagnosticError = { fg = solarized.error }, -- used for "Error" diagnostic virtual text
+        DiagnosticSignError = { fg = solarized.error }, -- used for "Error" diagnostic signs in sign column
+        DiagnosticFloatingError = { fg = solarized.error }, -- used for "Error" diagnostic messages in the diagnostics float
+        DiagnosticVirtualTextError = { fg = solarized.error }, -- Virtual text "Error"
+        DiagnosticUnderlineError = { style = "undercurl", sp = solarized.error }, -- used to underline "Error" diag
+
+        DiagnosticWarn = { fg = solarized.warning }, -- used for "Warning" diagnostic signs in sign column
+        DiagnosticSignWarn = { fg = solarized.warning }, -- used for "Warning" diagnostic signs in sign column
+        DiagnosticFloatingWarn = { fg = solarized.warning }, -- used for "Warning" diagnostic messages in the diagnostics float
+        DiagnosticVirtualTextWarn = { fg = solarized.warning }, -- Virtual text "Warning"
+        DiagnosticUnderlineWarn = { style = "undercurl", sp = solarized.warning }, -- used to underline "Warning" diagnostics.
+
+        DiagnosticInfo = { fg = solarized.information }, -- used for "Information" diagnostic virtual text
+        DiagnosticSignInfo = { fg = solarized.information }, -- used for "Information" diagnostic signs in sign column
+        DiagnosticFloatingInfo = { fg = solarized.information }, -- used for "Information" diagnostic messages in the diagnostics float
+        DiagnosticVirtualTextInfo = { fg = solarized.information }, -- Virtual text "Information"
+        DiagnosticUnderlineInfo = { style = "undercurl", sp = solarized.information }, -- used to underline "Information" diagnostics.
+
+        DiagnosticHint = { fg = solarized.hint }, -- used for "Hint" diagnostic virtual text
+        DiagnosticSignHint = { fg = solarized.hint }, -- used for "Hint" diagnostic signs in sign column
+        DiagnosticFloatingHint = { fg = solarized.hint }, -- used for "Hint" diagnostic messages in the diagnostics float
+        DiagnosticVirtualTextHint = { fg = solarized.hint }, -- Virtual text "Hint"
+        DiagnosticUnderlineHint = { style = "undercurl", sp = solarized.hint }, -- used to underline "Hint" diagnostics.
+    }
 
     editor.Normal = { fg = solarized.fg, bg = solarized.bg } -- normal text and background color
     editor.SignColumn = { fg = solarized.fg, bg = solarized.bg }
@@ -185,7 +209,7 @@ theme.loadTreeSitter = function()
         ["@include"] = { fg = solarized.violet },
         ["@keyword"] = { fg = solarized.orange },
         ["@keyword.function"] = { fg = solarized.blue },
-        ["@keyword.operator"] = { fg = solarized.fg },
+        ["@keyword.operator"] = { fg = solarized.orange },
         ["@label"] = { fg = solarized.yellow },
         ["@literal"] = { fg = solarized.yellow },
         ["@method"] = { fg = solarized.blue },
@@ -198,7 +222,7 @@ theme.loadTreeSitter = function()
         ["@punctuation.bracket"] = { fg = solarized.fg },
         ["@punctuation.delimiter"] = { fg = solarized.fg },
         ["@punctuation.special"] = { fg = solarized.fg },
-        ["@repeat"] = { fg = solarized.yellow },
+        ["@repeat"] = { fg = solarized.orange },
         ["@string"] = { fg = solarized.yellow },
         ["@string.escape"] = { fg = solarized.yellow },
         ["@string.regex"] = { fg = solarized.yellow },
@@ -219,8 +243,6 @@ theme.loadTreeSitter = function()
 end
 
 theme.loadLSP = function()
-    -- Lsp highlight groups
-
     local lsp = {
         LspDiagnosticsDefaultError = { fg = solarized.error }, -- used for "Error" diagnostic virtual text
         LspDiagnosticsSignError = { fg = solarized.error }, -- used for "Error" diagnostic signs in sign column
@@ -251,14 +273,30 @@ theme.loadLSP = function()
 end
 
 theme.loadPlugins = function()
-    -- Plugins highlight groups
-
     local plugins = {
 
         AlphaHeader = { fg = solarized.cyan },
         AlphaFooter = { fg = solarized.magenta },
         AlphaShortcut = { fg = solarized.green },
         AlphaButtons = { fg = solarized.blue },
+
+        NotifyERRORBorder = { fg = solarized.error },
+        NotifyWARNBorder = { fg = solarized.warning },
+        NotifyINFOBorder = { fg = solarized.green },
+        NotifyDEBUGBorder = { fg = solarized.green },
+        NotifyTRACEBorder = { fg = solarized.green },
+
+        NotifyERRORTitle = { fg = solarized.error },
+        NotifyWARNTitle = { fg = solarized.warning },
+        NotifyINFOTitle = { fg = solarized.green },
+        NotifyDEBUGTitle = { fg = solarized.green },
+        NotifyTRACETitle = { fg = solarized.green },
+
+        NotifyERRORIcon = { fg = solarized.error },
+        NotifyWARNIcon = { fg = solarized.warning },
+        NotifyINFOIcon = { fg = solarized.green },
+        NotifyDEBUGIcon = { fg = solarized.green },
+        NotifyTRACEIcon = { fg = solarized.green },
 
         -- LspTrouble
         LspTroubleText = { fg = solarized.text },
@@ -269,7 +307,7 @@ theme.loadPlugins = function()
         diffAdded = { fg = solarized.green },
         diffRemoved = { fg = solarized.red },
         diffChanged = { fg = solarized.yellow },
-        diffOldFile = { fg = solarized.yelow },
+        diffOldFile = { fg = solarized.yellow },
         diffNewFile = { fg = solarized.orange },
         diffFile = { fg = solarized.blue },
         diffLine = { fg = solarized.comments },
@@ -367,7 +405,7 @@ theme.loadPlugins = function()
 
         -- Indent Blankline
         IndentBlanklineChar = { fg = solarized.base02 },
-        IndentBlanklineContextChar = { fg = solarized.fg },
+        IndentBlanklineContextChar = { fg = solarized.base01 },
 
         -- Nvim dap
         DapBreakpoint = { fg = solarized.red },
