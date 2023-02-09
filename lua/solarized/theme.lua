@@ -8,7 +8,7 @@ theme.loadSyntax = function()
     local syntax = {
         Type = { fg = solarized.magenta }, -- int, long, char, etc.
         StorageClass = { fg = solarized.orange }, -- static, register, volatile, etc.
-        Structure = { fg = solarized.orange }, -- struct, union, enum, etc.
+        Structure = { fg = solarized.magenta }, -- struct, union, enum, etc.
         Constant = { fg = solarized.green }, -- any constant
         String = { fg = solarized.yellow, bg = solarized.none }, -- Any string
         Character = { fg = solarized.violet }, -- any character constant: 'c', '\n'
@@ -227,21 +227,21 @@ theme.loadLSP = function()
         LspDiagnosticsFloatingError = { fg = solarized.error }, -- used for "Error" diagnostic messages in the diagnostics float
         LspDiagnosticsVirtualTextError = { fg = solarized.error }, -- Virtual text "Error"
         LspDiagnosticsUnderlineError = { style = "undercurl", sp = solarized.error }, -- used to underline "Error" diagnostics.
-        LspDiagnosticsDefaultWarning = { fg = solarized.yellow }, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsSignWarning = { fg = solarized.yellow }, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsFloatingWarning = { fg = solarized.yellow }, -- used for "Warning" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextWarning = { fg = solarized.yellow }, -- Virtual text "Warning"
-        LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = solarized.yellow }, -- used to underline "Warning" diagnostics.
-        LspDiagnosticsDefaultInformation = { fg = solarized.paleblue }, -- used for "Information" diagnostic virtual text
-        LspDiagnosticsSignInformation = { fg = solarized.paleblue }, -- used for "Information" diagnostic signs in sign column
-        LspDiagnosticsFloatingInformation = { fg = solarized.paleblue }, -- used for "Information" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextInformation = { fg = solarized.paleblue }, -- Virtual text "Information"
-        LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = solarized.paleblue }, -- used to underline "Information" diagnostics.
-        LspDiagnosticsDefaultHint = { fg = solarized.purple }, -- used for "Hint" diagnostic virtual text
-        LspDiagnosticsSignHint = { fg = solarized.purple }, -- used for "Hint" diagnostic signs in sign column
-        LspDiagnosticsFloatingHint = { fg = solarized.purple }, -- used for "Hint" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextHint = { fg = solarized.purple }, -- Virtual text "Hint"
-        LspDiagnosticsUnderlineHint = { style = "undercurl", sp = solarized.paleblue }, -- used to underline "Hint" diagnostics.
+        LspDiagnosticsDefaultWarning = { fg = solarized.warning }, -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsSignWarning = { fg = solarized.warning }, -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsFloatingWarning = { fg = solarized.warning }, -- used for "Warning" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextWarning = { fg = solarized.warning }, -- Virtual text "Warning"
+        LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = solarized.warning }, -- used to underline "Warning" diagnostics.
+        LspDiagnosticsDefaultInformation = { fg = solarized.information }, -- used for "Information" diagnostic virtual text
+        LspDiagnosticsSignInformation = { fg = solarized.information }, -- used for "Information" diagnostic signs in sign column
+        LspDiagnosticsFloatingInformation = { fg = solarized.information }, -- used for "Information" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextInformation = { fg = solarized.information }, -- Virtual text "Information"
+        LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = solarized.information }, -- used to underline "Information" diagnostics.
+        LspDiagnosticsDefaultHint = { fg = solarized.hint }, -- used for "Hint" diagnostic virtual text
+        LspDiagnosticsSignHint = { fg = solarized.hint }, -- used for "Hint" diagnostic signs in sign column
+        LspDiagnosticsFloatingHint = { fg = solarized.hint }, -- used for "Hint" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextHint = { fg = solarized.hint }, -- Virtual text "Hint"
+        LspDiagnosticsUnderlineHint = { style = "undercurl", sp = solarized.hint }, -- used to underline "Hint" diagnostics.
         LspReferenceText = { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "text" references
         LspReferenceRead = { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "read" references
         LspReferenceWrite = { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "write" references
@@ -322,9 +322,9 @@ theme.loadPlugins = function()
         NvimTreeFolderIcon = { fg = solarized.accent },
         NvimTreeIndentMarker = { fg = solarized.disabled },
         LspDiagnosticsError = { fg = solarized.error },
-        LspDiagnosticsWarning = { fg = solarized.yellow },
-        LspDiagnosticsInformation = { fg = solarized.paleblue },
-        LspDiagnosticsHint = { fg = solarized.purple },
+        LspDiagnosticsWarning = { fg = solarized.warning },
+        LspDiagnosticsInformation = { fg = solarized.information },
+        LspDiagnosticsHint = { fg = solarized.hint },
 
         -- WhichKey
         WhichKey = { fg = solarized.accent },
@@ -336,9 +336,9 @@ theme.loadPlugins = function()
 
         -- LspSaga
         DiagnosticError = { fg = solarized.error },
-        DiagnosticWarning = { fg = solarized.yellow },
-        DiagnosticInformation = { fg = solarized.paleblue },
-        DiagnosticHint = { fg = solarized.purple },
+        DiagnosticWarning = { fg = solarized.warning },
+        DiagnosticInformation = { fg = solarized.information },
+        DiagnosticHint = { fg = solarized.hint },
         DiagnosticTruncateLine = { fg = solarized.fg },
         LspFloatWinNormal = { bg = solarized.contrast },
         LspFloatWinBorder = { fg = solarized.purple },

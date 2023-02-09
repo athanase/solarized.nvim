@@ -39,7 +39,10 @@ local solarized = {
     cursor = "#268bd2",
     accent = "#a73642",
 
-    error = "#d33682",
+    error = "#dc322f",
+    warning = "#b58900",
+    information = "#6c71c4",
+    hint = "#6c71c4",
     link = "#2aa198",
 
     none = "NONE",
