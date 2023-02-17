@@ -82,7 +82,7 @@ theme.loadEditor = function()
         IncSearch = { fg = solarized.highlight, bg = solarized.white, style = "reverse" },
         LineNr = { fg = solarized.comments, bg = solarized.none },
         CursorLineNr = { fg = solarized.green, bg = solarized.selection },
-        MatchParen = { fg = solarized.yellow, bg = solarized.none },
+        MatchParen = { fg = solarized.green, bg = solarized.none },
         ModeMsg = { fg = solarized.accent },
         MoreMsg = { fg = solarized.accent },
         NonText = { fg = solarized.disabled },
