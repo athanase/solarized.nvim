@@ -1,10 +1,7 @@
 local solarized = require("solarized.colors")
-
 local theme = {}
 
 theme.loadSyntax = function()
-    -- Syntax highlight groups
-
     local syntax = {
         Type = { fg = solarized.magenta }, -- int, long, char, etc.
         StorageClass = { fg = solarized.orange }, -- static, register, volatile, etc.
@@ -183,11 +180,12 @@ theme.loadTreeSitter = function()
         ["@constructor"] = { fg = solarized.blue },
         ["@conditional.ternary"] = { fg = solarized.fg },
         ["@annotation"] = { fg = solarized.yellow },
-        ["@attribute"] = { fg = solarized.orange },
+        ["@attribute"] = { fg = solarized.violet },
         ["@boolean"] = { fg = solarized.violet },
+        ["@preproc"] = { fg = solarized.violet },
         ["@character"] = { fg = solarized.yellow },
         ["@conditional"] = { fg = solarized.orange },
-        ["@constant"] = { fg = solarized.green },
+        ["@constant"] = { fg = solarized.blue },
         ["@constant.builtin"] = { fg = solarized.green },
         ["@constant.macro"] = { fg = solarized.violet },
         ["@constant.ructor"] = { fg = solarized.yellow },
@@ -203,7 +201,7 @@ theme.loadTreeSitter = function()
         ["@keyword"] = { fg = solarized.orange },
         ["@keyword.function"] = { fg = solarized.blue },
         ["@keyword.operator"] = { fg = solarized.orange },
-        ["@label"] = { fg = solarized.yellow },
+        ["@label"] = { fg = solarized.orange },
         ["@literal"] = { fg = solarized.yellow },
         ["@method"] = { fg = solarized.blue },
         ["@namespace"] = { fg = solarized.green },
@@ -267,6 +265,7 @@ end
 
 theme.loadPlugins = function()
     local plugins = {
+        -- Alpha
         AlphaHeader = { fg = solarized.cyan },
         AlphaFooter = { fg = solarized.magenta },
         AlphaShortcut = { fg = solarized.green },
@@ -377,15 +376,38 @@ theme.loadPlugins = function()
         -- BufferLine
         BufferLineIndicatorSelected = { fg = solarized.accent },
         BufferLineFill = { bg = solarized.bg_alt },
-        -- Sneak
-        Sneak = { fg = solarized.bg, bg = solarized.accent },
-        SneakScope = { bg = solarized.fg },
+        -- Hop
+        HopNextKey = { fg = solarized.magenta },
+        HopNextKey1 = { fg = solarized.green },
+        HopNextKey2 = { fg = solarized.green },
         -- Indent Blankline
         IndentBlanklineChar = { fg = solarized.base02 },
         IndentBlanklineContextChar = { fg = solarized.base01 },
         -- Nvim dap
-        DapBreakpoint = { fg = solarized.red },
+        DapBreakpoint = { fg = solarized.magenta },
         DapStopped = { fg = solarized.green },
+        DapUIVariable = { fg = solarized.blue },
+        DapUIType = { fg = solarized.magenta },
+        DapUIValue = { fg = solarized.red },
+        DapUIFrameName = { fg = solarized.cyan },
+        DapUIThread = { fg = solarized.yellow },
+        DapUIWatchesValue = { fg = solarized.green },
+        DapUIBreakpointsInfo = { fg = solarized.magenta },
+        DapUIBreakpointsCurrentLine = { fg = solarized.yellow, style = 'bold' },
+        DapUIWatchesEmpty = { fg = solarized.yellow },
+        DapUIWatchesError = { link = 'DapUIWatchesEmpty' },
+        DapUIBreakpointsDisabledLine = { fg = solarized.yellow },
+        DapUISource = { fg = solarized.yellow },
+        DapUIBreakpointsPath = { fg = solarized.violet },
+        DapUIScope = { link = 'DapUIBreakpointsPath' },
+        DapUILineNumber = { link = 'DapUIBreakpointsPath' },
+        DapUIBreakpointsLine = { link = 'DapUIBreakpointsPath' },
+        DapUIFloatBorder = { link = 'DapUIBreakpointsPath' },
+        DapUIStoppedThread = { link = 'DapUIBreakpointsPath' },
+        DapUIDecoration = { link = 'DapUIBreakpointsPath' },
+        DapUIModifiedValue = { fg = solarized.violet, style = 'bold' },
+        DapUIWatchesHeader = {},
+        DapUIWatchesFrame = {},
     }
 
     -- Options:
