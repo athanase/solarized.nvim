@@ -331,7 +331,7 @@ theme.loadPlugins = function()
         TelescopeNormal = { fg = solarized.fg, bg = solarized.float },
         -- NvimTree
         NvimTreeRootFolder = { fg = solarized.blue },
-        NvimTreeGitDirty = { fg = solarized.yellow },
+        NvimTreeGitDirty = { fg = solarized.fg },
         NvimTreeGitNew = { fg = solarized.green },
         NvimTreeImageFile = { fg = solarized.yellow },
         NvimTreeExecFile = { fg = solarized.cyan },
@@ -340,11 +340,10 @@ theme.loadPlugins = function()
         NvimTreeEmptyFolderName = { fg = solarized.disabled },
         NvimTreeFolderIcon = { fg = solarized.blue },
         NvimTreeIndentMarker = { fg = solarized.fg },
-        -- LspDiagnosticsError = { fg = solarized.error },
-        -- LspDiagnosticsWarning = { fg = solarized.warning },
-        -- LspDiagnosticsInformation = { fg = solarized.information },
-        -- LspDiagnosticsHint = { fg = solarized.hint },
-
+        LspDiagnosticsError = { fg = solarized.error },
+        LspDiagnosticsWarning = { fg = solarized.warning },
+        LspDiagnosticsInformation = { fg = solarized.information },
+        LspDiagnosticsHint = { fg = solarized.hint },
         -- WhichKey
         WhichKey = { fg = solarized.green },
         WhichKeyGroup = { fg = solarized.cyan },
