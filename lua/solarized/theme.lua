@@ -321,14 +321,28 @@ theme.loadPlugins = function()
         GitSignsDeleteNr = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
         GitSignsDeleteLn = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
         GitSignsCurrentLineBlame = { fg = solarized.base01 },
+
         -- Telescope
-        TelescopePromptBorder = { fg = solarized.blue },
-        TelescopeResultsBorder = { fg = solarized.green },
+        TelescopeSelectionCaret = { fg = solarized.blue },
+        TelescopeSelection = { fg = solarized.blue, bg = solarized.selection },
+        TelescopeMatching = { fg = solarized.magenta },
+        TelescopeNormal = { fg = solarized.fg, bg = solarized.bg },
+        -- TelescopeBorder = { fg = bg_alt, bg = bg },
+
+        TelescopePreviewNormal = { bg = solarized.bg },
+        TelescopePreviewTitle = { fg = solarized.cyan },
         TelescopePreviewBorder = { fg = solarized.cyan },
-        TelescopeSelectionCaret = { fg = solarized.green },
-        TelescopeSelection = { fg = solarized.green, bg = solarized.selection },
-        TelescopeMatching = { fg = solarized.cyan },
-        TelescopeNormal = { fg = solarized.fg, bg = solarized.float },
+
+        TelescopePromptNormal = { fg = solarized.fg },
+        TelescopePromptPrefix = { fg = solarized.green },
+        TelescopePromptCounter = { fg = solarized.green },
+        TelescopePromptTitle = { fg = solarized.green },
+        TelescopePromptBorder = { fg = solarized.green },
+
+        -- TelescopeResultsNormal = { bg = bg },
+        TelescopeResultsTitle = { fg = solarized.blue },
+        TelescopeResultsBorder = { fg = solarized.blue },
+
         -- NvimTree
         NvimTreeRootFolder = { fg = solarized.blue },
         NvimTreeGitDirty = { fg = solarized.fg },
