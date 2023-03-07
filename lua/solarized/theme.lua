@@ -65,7 +65,7 @@ theme.loadEditor = function()
         Normal = { fg = solarized.fg, bg = solarized.bg }, --  used for the columns set with 'colorcolumn'
         NormalFloat = { fg = solarized.fg, bg = solarized.float }, -- normal text and background color
         Conceal = { fg = solarized.disabled }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-        Cursor = { fg = solarized.cursor, bg = solarized.none }, -- the character under the cursor
+        Cursor = { fg = solarized.none, bg = solarized.cursor }, -- the character under the cursor
         CursorIM = { fg = solarized.cursor, bg = solarized.none }, -- like Cursor, but used when in IME mode
         Directory = { fg = solarized.blue, bg = solarized.none }, -- directory names (and other special names in listings)
         DiffAdd = { fg = solarized.green, bg = solarized.none, style = "reverse" }, -- diff mode: Added line
@@ -399,6 +399,10 @@ theme.loadPlugins = function()
         -- Indent Blankline
         IndentBlanklineChar = { fg = solarized.base02 },
         IndentBlanklineContextChar = { fg = solarized.base01 },
+
+        -- Noice
+        NoiceCursor = { sytle = "reverse" },
+
         -- Nvim dap
         DapBreakpoint = { fg = solarized.magenta },
         DapStopped = { fg = solarized.green },
