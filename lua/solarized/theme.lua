@@ -68,10 +68,14 @@ theme.loadEditor = function()
         Cursor = { fg = solarized.none, bg = solarized.cursor }, -- the character under the cursor
         CursorIM = { fg = solarized.cursor, bg = solarized.none }, -- like Cursor, but used when in IME mode
         Directory = { fg = solarized.blue, bg = solarized.none }, -- directory names (and other special names in listings)
-        DiffAdd = { fg = solarized.green, bg = solarized.none, style = "reverse" }, -- diff mode: Added line
-        DiffChange = { fg = solarized.orange, bg = solarized.none, style = "reverse" }, --  diff mode: Changed line
-        DiffDelete = { fg = solarized.red, bg = solarized.none, style = "reverse" }, -- diff mode: Deleted line
-        DiffText = { fg = solarized.yellow, bg = solarized.none, style = "reverse" }, -- diff mode: Changed text within a changed line
+        -- DiffAdd = { bg = "#204529" },
+        -- DiffChange = { bg = "#1f2231" },
+        -- DiffDelete = { bg = "#37222c" },
+        -- DiffText = { bg = "#394b70" },
+        DiffAdd = { fg = solarized.none, bg = "#204529" },
+        DiffChange = { fg = solarized.none, bg = "#0f5174" },
+        DiffDelete = { fg = solarized.base02, bg = solarized.bg },
+        DiffText = { fg = solarized.yellow, bg = "#115a5d" },
         EndOfBuffer = { fg = solarized.disabled },
         ErrorMsg = { fg = solarized.none },
         Folded = { fg = solarized.disabled, bg = solarized.none },
@@ -428,6 +432,9 @@ theme.loadPlugins = function()
         DapUIModifiedValue = { fg = solarized.green },
         DapUIWatchesHeader = {},
         DapUIWatchesFrame = {},
+
+        -- Diffview
+
     }
 
     -- Options:
