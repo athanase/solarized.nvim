@@ -68,10 +68,6 @@ theme.loadEditor = function()
         Cursor = { fg = solarized.none, bg = solarized.cursor }, -- the character under the cursor
         CursorIM = { fg = solarized.cursor, bg = solarized.none }, -- like Cursor, but used when in IME mode
         Directory = { fg = solarized.blue, bg = solarized.none }, -- directory names (and other special names in listings)
-        -- DiffAdd = { bg = "#204529" },
-        -- DiffChange = { bg = "#1f2231" },
-        -- DiffDelete = { bg = "#37222c" },
-        -- DiffText = { bg = "#394b70" },
         DiffAdd = { fg = solarized.none, bg = "#204529" },
         DiffChange = { fg = solarized.none, bg = "#0f5174" },
         DiffDelete = { fg = solarized.base02, bg = solarized.bg },
