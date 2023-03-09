@@ -64,25 +64,25 @@ theme.loadEditor = function()
     local editor = {
         Normal = { fg = solarized.fg, bg = solarized.bg }, --  used for the columns set with 'colorcolumn'
         NormalFloat = { fg = solarized.fg, bg = solarized.float }, -- normal text and background color
-        Conceal = { fg = solarized.disabled }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+        Conceal = { fg = solarized.red }, -- placeholder characters substituted for concealed text (see 'conceallevel')
         Cursor = { fg = solarized.none, bg = solarized.cursor }, -- the character under the cursor
         CursorIM = { fg = solarized.cursor, bg = solarized.none }, -- like Cursor, but used when in IME mode
         Directory = { fg = solarized.blue, bg = solarized.none }, -- directory names (and other special names in listings)
         DiffAdd = { fg = solarized.none, bg = "#204529" },
         DiffChange = { fg = solarized.none, bg = "#0f5174" },
-        DiffDelete = { fg = solarized.base02, bg = solarized.bg },
+        DiffDelete = { fg = solarized.red, bg = solarized.bg },
         DiffText = { fg = solarized.yellow, bg = "#115a5d" },
         EndOfBuffer = { fg = solarized.disabled },
         ErrorMsg = { fg = solarized.none },
-        Folded = { fg = solarized.disabled, bg = solarized.none },
+        Folded = { fg = solarized.fg, bg = solarized.none },
         FoldColumn = { fg = solarized.blue },
         IncSearch = { fg = solarized.highlight, bg = solarized.white, style = "reverse" },
         LineNr = { fg = solarized.comments, bg = solarized.none },
-        CursorLineNr = { fg = solarized.green, bg = solarized.selection },
+        CursorLineNr = { fg = solarized.fg, bg = solarized.bg },
         MatchParen = { fg = solarized.green, bg = solarized.none },
         ModeMsg = { fg = solarized.accent },
         MoreMsg = { fg = solarized.accent },
-        NonText = { fg = solarized.disabled },
+        NonText = { fg = solarized.base01 },
         Pmenu = { fg = solarized.fg, bg = solarized.none },
         PmenuSel = { fg = solarized.accent, bg = solarized.active },
         PmenuSbar = { fg = solarized.text, bg = solarized.contrast },
@@ -110,7 +110,7 @@ theme.loadEditor = function()
         WildMenu = { fg = solarized.orange, bg = solarized.none },
         CursorColumn = { fg = solarized.none, bg = solarized.active },
         CursorLine = { fg = solarized.none, bg = solarized.selection },
-        ToolbarLine = { fg = solarized.fg, bg = solarized.bg_alt },
+        ToolbarLine = { fg = solarized.fg, bg = solarized.bg },
         ToolbarButton = { fg = solarized.fg, bg = solarized.none },
         NormalMode = { fg = solarized.bg, bg = solarized.blue },
         InsertMode = { fg = solarized.bg, bg = solarized.green },
@@ -430,7 +430,13 @@ theme.loadPlugins = function()
         DapUIWatchesFrame = {},
 
         -- Diffview
-
+        DiffviewFolderSign = { fg = solarized.blue },
+        DiffviewFolderName = { fg = solarized.blue },
+        DiffviewFilePanelRootPath = { fg = solarized.cyan },
+        DiffviewFilePanelTitle = { fg = solarized.cyan },
+        DiffviewFilePanelCounter = { fg = solarized.fg },
+        DiffviewSecondary = { fg = solarized.violet },
+        DiffviewNonText = { fg = solarized.base01 },
     }
 
     -- Options:
