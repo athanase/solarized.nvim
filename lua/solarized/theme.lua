@@ -3,35 +3,35 @@ local theme = {}
 
 theme.loadSyntax = function()
     local syntax = {
-        Type = { fg = solarized.magenta }, -- int, long, char, etc.
-        StorageClass = { fg = solarized.orange }, -- static, register, volatile, etc.
-        Structure = { fg = solarized.magenta }, -- struct, union, enum, etc.
-        Constant = { fg = solarized.blue }, -- any constant
-        String = { fg = solarized.yellow, bg = solarized.none }, -- Any string
-        Character = { fg = solarized.violet }, -- any character constant: 'c', '\n'
-        Number = { fg = solarized.red }, -- a number constant: 5
-        Boolean = { fg = solarized.violet }, -- a boolean constant: TRUE, false
-        Float = { fg = solarized.red }, -- a floating point constant: 2.3e10
-        Statement = { fg = solarized.orange }, -- any statement
-        Label = { fg = solarized.orange }, -- case, default, etc.
-        Operator = { fg = solarized.fg }, -- sizeof", "+", "*", etc.
-        Exception = { fg = solarized.orange }, -- try, catch, throw
-        PreProc = { fg = solarized.violet }, -- generic Preprocessor
-        Include = { fg = solarized.violet }, -- preprocessor #include
-        Define = { fg = solarized.violet }, -- preprocessor #define
-        Macro = { fg = solarized.violet }, -- same as Define
-        Typedef = { fg = solarized.green }, -- A typedef
-        PreCondit = { fg = solarized.violet }, -- preprocessor #if, #else, #endif, etc.
-        Special = { fg = solarized.fg }, -- any special symbol
-        SpecialChar = { fg = solarized.green }, -- special character in a constant
-        Tag = { fg = solarized.red }, -- you can use CTRL-] on this
-        Delimiter = { fg = solarized.fg }, -- character that needs attention like , or .
-        SpecialComment = { fg = solarized.cyan }, -- special things inside a comment
-        Debug = { fg = solarized.violet }, -- debugging statements
-        Underlined = { fg = solarized.link, bg = solarized.none, style = "underline" }, -- text that stands out, HTML links
-        Ignore = { fg = solarized.disabled }, -- left blank, hidden
+        Type = { fg = solarized.magenta },                                               -- int, long, char, etc.
+        StorageClass = { fg = solarized.orange },                                        -- static, register, volatile, etc.
+        Structure = { fg = solarized.magenta },                                          -- struct, union, enum, etc.
+        Constant = { fg = solarized.blue },                                              -- any constant
+        String = { fg = solarized.yellow, bg = solarized.none },                         -- Any string
+        Character = { fg = solarized.violet },                                           -- any character constant: 'c', '\n'
+        Number = { fg = solarized.red },                                                 -- a number constant: 5
+        Boolean = { fg = solarized.violet },                                             -- a boolean constant: TRUE, false
+        Float = { fg = solarized.red },                                                  -- a floating point constant: 2.3e10
+        Statement = { fg = solarized.orange },                                           -- any statement
+        Label = { fg = solarized.orange },                                               -- case, default, etc.
+        Operator = { fg = solarized.fg },                                                -- sizeof", "+", "*", etc.
+        Exception = { fg = solarized.orange },                                           -- try, catch, throw
+        PreProc = { fg = solarized.violet },                                             -- generic Preprocessor
+        Include = { fg = solarized.violet },                                             -- preprocessor #include
+        Define = { fg = solarized.violet },                                              -- preprocessor #define
+        Macro = { fg = solarized.violet },                                               -- same as Define
+        Typedef = { fg = solarized.green },                                              -- A typedef
+        PreCondit = { fg = solarized.violet },                                           -- preprocessor #if, #else, #endif, etc.
+        Special = { fg = solarized.fg },                                                 -- any special symbol
+        SpecialChar = { fg = solarized.green },                                          -- special character in a constant
+        Tag = { fg = solarized.red },                                                    -- you can use CTRL-] on this
+        Delimiter = { fg = solarized.fg },                                               -- character that needs attention like , or .
+        SpecialComment = { fg = solarized.cyan },                                        -- special things inside a comment
+        Debug = { fg = solarized.violet },                                               -- debugging statements
+        Underlined = { fg = solarized.link, bg = solarized.none, style = "underline" },  -- text that stands out, HTML links
+        Ignore = { fg = solarized.disabled },                                            -- left blank, hidden
         Error = { fg = solarized.error, bg = solarized.none, style = "bold,underline" }, -- any erroneous construct
-        Todo = { fg = solarized.yellow, bg = solarized.none, style = "bold,italic" }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+        Todo = { fg = solarized.yellow, bg = solarized.none, style = "bold,italic" },    -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
         htmlLink = { fg = solarized.link, style = "underline" },
         htmlH1 = { fg = solarized.cyan },
         htmlH2 = { fg = solarized.red },
@@ -50,24 +50,24 @@ theme.loadSyntax = function()
 
     -- Options:
 
-    syntax.Comment = { fg = solarized.comments } -- normal comments
+    syntax.Comment = { fg = solarized.comments }   -- normal comments
     syntax.Conditional = { fg = solarized.orange } -- normal if, then, else, endif, switch, etc.
-    syntax.Keyword = { fg = solarized.orange } -- normal for, do, while, etc.
-    syntax.Repeat = { fg = solarized.orange } -- normal any other keyword
-    syntax.Function = { fg = solarized.blue } -- normal function names
-    syntax.Identifier = { fg = solarized.blue } -- any variable name
+    syntax.Keyword = { fg = solarized.orange }     -- normal for, do, while, etc.
+    syntax.Repeat = { fg = solarized.orange }      -- normal any other keyword
+    syntax.Function = { fg = solarized.blue }      -- normal function names
+    syntax.Identifier = { fg = solarized.blue }    -- any variable name
 
     return syntax
 end
 
 theme.loadEditor = function()
     local editor = {
-        Normal = { fg = solarized.fg, bg = solarized.bg }, --  used for the columns set with 'colorcolumn'
+        Normal = { fg = solarized.fg, bg = solarized.bg },         --  used for the columns set with 'colorcolumn'
         NormalFloat = { fg = solarized.fg, bg = solarized.float }, -- normal text and background color
-        Conceal = { fg = solarized.red }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-        Cursor = { fg = solarized.none, bg = solarized.cursor }, -- the character under the cursor
+        Conceal = { fg = solarized.red },                          -- placeholder characters substituted for concealed text (see 'conceallevel')
+        Cursor = { fg = solarized.none, bg = solarized.cursor },   -- the character under the cursor
         CursorIM = { fg = solarized.cursor, bg = solarized.none }, -- like Cursor, but used when in IME mode
-        Directory = { fg = solarized.blue, bg = solarized.none }, -- directory names (and other special names in listings)
+        Directory = { fg = solarized.blue, bg = solarized.none },  -- directory names (and other special names in listings)
         DiffAdd = { fg = solarized.none, bg = "#204529" },
         DiffChange = { fg = solarized.none, bg = "#0f5174" },
         DiffDelete = { fg = solarized.red, bg = solarized.bg },
@@ -126,26 +126,26 @@ theme.loadEditor = function()
         DashboardHeader = { fg = solarized.grey },
         DashboardCenter = { fg = solarized.grey },
         DashboardFooter = { fg = solarized.green },
-        DiagnosticError = { fg = solarized.error }, -- used for "Error" diagnostic virtual text
-        DiagnosticSignError = { fg = solarized.error }, -- used for "Error" diagnostic signs in sign column
-        DiagnosticFloatingError = { fg = solarized.error }, -- used for "Error" diagnostic messages in the diagnostics float
-        DiagnosticVirtualTextError = { fg = solarized.error }, -- Virtual text "Error"
-        DiagnosticUnderlineError = { style = "undercurl", sp = solarized.error }, -- used to underline "Error" diag
-        DiagnosticWarn = { fg = solarized.warning }, -- used for "Warning" diagnostic signs in sign column
-        DiagnosticSignWarn = { fg = solarized.warning }, -- used for "Warning" diagnostic signs in sign column
-        DiagnosticFloatingWarn = { fg = solarized.warning }, -- used for "Warning" diagnostic messages in the diagnostics float
-        DiagnosticVirtualTextWarn = { fg = solarized.warning }, -- Virtual text "Warning"
-        DiagnosticUnderlineWarn = { style = "undercurl", sp = solarized.warning }, -- used to underline "Warning" diagnostics.
-        DiagnosticInfo = { fg = solarized.information }, -- used for "Information" diagnostic virtual text
-        DiagnosticSignInfo = { fg = solarized.information }, -- used for "Information" diagnostic signs in sign column
-        DiagnosticFloatingInfo = { fg = solarized.information }, -- used for "Information" diagnostic messages in the diagnostics float
-        DiagnosticVirtualTextInfo = { fg = solarized.information }, -- Virtual text "Information"
+        DiagnosticError = { fg = solarized.error },                                    -- used for "Error" diagnostic virtual text
+        DiagnosticSignError = { fg = solarized.error },                                -- used for "Error" diagnostic signs in sign column
+        DiagnosticFloatingError = { fg = solarized.error },                            -- used for "Error" diagnostic messages in the diagnostics float
+        DiagnosticVirtualTextError = { fg = solarized.error },                         -- Virtual text "Error"
+        DiagnosticUnderlineError = { style = "undercurl", sp = solarized.error },      -- used to underline "Error" diag
+        DiagnosticWarn = { fg = solarized.warning },                                   -- used for "Warning" diagnostic signs in sign column
+        DiagnosticSignWarn = { fg = solarized.warning },                               -- used for "Warning" diagnostic signs in sign column
+        DiagnosticFloatingWarn = { fg = solarized.warning },                           -- used for "Warning" diagnostic messages in the diagnostics float
+        DiagnosticVirtualTextWarn = { fg = solarized.warning },                        -- Virtual text "Warning"
+        DiagnosticUnderlineWarn = { style = "undercurl", sp = solarized.warning },     -- used to underline "Warning" diagnostics.
+        DiagnosticInfo = { fg = solarized.information },                               -- used for "Information" diagnostic virtual text
+        DiagnosticSignInfo = { fg = solarized.information },                           -- used for "Information" diagnostic signs in sign column
+        DiagnosticFloatingInfo = { fg = solarized.information },                       -- used for "Information" diagnostic messages in the diagnostics float
+        DiagnosticVirtualTextInfo = { fg = solarized.information },                    -- Virtual text "Information"
         DiagnosticUnderlineInfo = { style = "undercurl", sp = solarized.information }, -- used to underline "Information" diagnostics.
-        DiagnosticHint = { fg = solarized.hint }, -- used for "Hint" diagnostic virtual text
-        DiagnosticSignHint = { fg = solarized.hint }, -- used for "Hint" diagnostic signs in sign column
-        DiagnosticFloatingHint = { fg = solarized.hint }, -- used for "Hint" diagnostic messages in the diagnostics float
-        DiagnosticVirtualTextHint = { fg = solarized.hint }, -- Virtual text "Hint"
-        DiagnosticUnderlineHint = { style = "undercurl", sp = solarized.hint }, -- used to underline "Hint" diagnostics.
+        DiagnosticHint = { fg = solarized.hint },                                      -- used for "Hint" diagnostic virtual text
+        DiagnosticSignHint = { fg = solarized.hint },                                  -- used for "Hint" diagnostic signs in sign column
+        DiagnosticFloatingHint = { fg = solarized.hint },                              -- used for "Hint" diagnostic messages in the diagnostics float
+        DiagnosticVirtualTextHint = { fg = solarized.hint },                           -- Virtual text "Hint"
+        DiagnosticUnderlineHint = { style = "undercurl", sp = solarized.hint },        -- used to underline "Hint" diagnostics.
     }
 
     editor.Normal = { fg = solarized.fg, bg = solarized.bg } -- normal text and background color
@@ -185,14 +185,18 @@ theme.loadTreeSitter = function()
         ["@preproc"] = { fg = solarized.violet },
         ["@character"] = { fg = solarized.yellow },
         ["@conditional"] = { fg = solarized.orange },
-        ["@constant"] = { fg = solarized.blue },
         ["@constant.builtin"] = { fg = solarized.green },
+        ["@constant"] = { fg = solarized.blue },
+        ["@constant.cpp"] = { fg = solarized.orange },
         ["@constant.macro"] = { fg = solarized.violet },
         ["@constant.ructor"] = { fg = solarized.yellow },
         ["@emphasis"] = { fg = solarized.yellow },
         ["@error"] = { style = "undercurl", sp = solarized.error },
         ["@exception"] = { fg = solarized.orange },
         ["@field"] = { fg = solarized.cyan },
+        ["@lsp.type.property.cpp"] = { fg = solarized.cyan },
+        ["@lsp.type.namespace.cpp"] = { fg = solarized.green },
+        ["@lsp.type.macro.cpp"] = { fg = solarized.violet },
         ["@float"] = { fg = solarized.red },
         ["@function"] = { fg = solarized.blue },
         ["@function.builtin"] = { fg = solarized.blue },
@@ -235,29 +239,29 @@ end
 
 theme.loadLSP = function()
     local lsp = {
-        LspDiagnosticsDefaultError = { fg = solarized.error }, -- used for "Error" diagnostic virtual text
-        LspDiagnosticsSignError = { fg = solarized.error }, -- used for "Error" diagnostic signs in sign column
-        LspDiagnosticsFloatingError = { fg = solarized.error }, -- used for "Error" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextError = { fg = solarized.error }, -- Virtual text "Error"
-        LspDiagnosticsUnderlineError = { style = "undercurl", sp = solarized.error }, -- used to underline "Error" diagnostics.
-        LspDiagnosticsDefaultWarning = { fg = solarized.warning }, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsSignWarning = { fg = solarized.warning }, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsFloatingWarning = { fg = solarized.warning }, -- used for "Warning" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextWarning = { fg = solarized.warning }, -- Virtual text "Warning"
-        LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = solarized.warning }, -- used to underline "Warning" diagnostics.
-        LspDiagnosticsDefaultInformation = { fg = solarized.information }, -- used for "Information" diagnostic virtual text
-        LspDiagnosticsSignInformation = { fg = solarized.information }, -- used for "Information" diagnostic signs in sign column
-        LspDiagnosticsFloatingInformation = { fg = solarized.information }, -- used for "Information" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextInformation = { fg = solarized.information }, -- Virtual text "Information"
+        LspDiagnosticsDefaultError = { fg = solarized.error },                                    -- used for "Error" diagnostic virtual text
+        LspDiagnosticsSignError = { fg = solarized.error },                                       -- used for "Error" diagnostic signs in sign column
+        LspDiagnosticsFloatingError = { fg = solarized.error },                                   -- used for "Error" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextError = { fg = solarized.error },                                -- Virtual text "Error"
+        LspDiagnosticsUnderlineError = { style = "undercurl", sp = solarized.error },             -- used to underline "Error" diagnostics.
+        LspDiagnosticsDefaultWarning = { fg = solarized.warning },                                -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsSignWarning = { fg = solarized.warning },                                   -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsFloatingWarning = { fg = solarized.warning },                               -- used for "Warning" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextWarning = { fg = solarized.warning },                            -- Virtual text "Warning"
+        LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = solarized.warning },         -- used to underline "Warning" diagnostics.
+        LspDiagnosticsDefaultInformation = { fg = solarized.information },                        -- used for "Information" diagnostic virtual text
+        LspDiagnosticsSignInformation = { fg = solarized.information },                           -- used for "Information" diagnostic signs in sign column
+        LspDiagnosticsFloatingInformation = { fg = solarized.information },                       -- used for "Information" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextInformation = { fg = solarized.information },                    -- Virtual text "Information"
         LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = solarized.information }, -- used to underline "Information" diagnostics.
-        LspDiagnosticsDefaultHint = { fg = solarized.hint }, -- used for "Hint" diagnostic virtual text
-        LspDiagnosticsSignHint = { fg = solarized.hint }, -- used for "Hint" diagnostic signs in sign column
-        LspDiagnosticsFloatingHint = { fg = solarized.hint }, -- used for "Hint" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextHint = { fg = solarized.hint }, -- Virtual text "Hint"
-        LspDiagnosticsUnderlineHint = { style = "undercurl", sp = solarized.hint }, -- used to underline "Hint" diagnostics.
-        LspReferenceText = { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "text" references
-        LspReferenceRead = { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "read" references
-        LspReferenceWrite = { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "write" references
+        LspDiagnosticsDefaultHint = { fg = solarized.hint },                                      -- used for "Hint" diagnostic virtual text
+        LspDiagnosticsSignHint = { fg = solarized.hint },                                         -- used for "Hint" diagnostic signs in sign column
+        LspDiagnosticsFloatingHint = { fg = solarized.hint },                                     -- used for "Hint" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextHint = { fg = solarized.hint },                                  -- Virtual text "Hint"
+        LspDiagnosticsUnderlineHint = { style = "undercurl", sp = solarized.hint },               -- used to underline "Hint" diagnostics.
+        LspReferenceText = { fg = solarized.accent, bg = solarized.highlight },                   -- used for highlighting "text" references
+        LspReferenceRead = { fg = solarized.accent, bg = solarized.highlight },                   -- used for highlighting "read" references
+        LspReferenceWrite = { fg = solarized.accent, bg = solarized.highlight },                  -- used for highlighting "write" references
     }
 
     return lsp
@@ -307,21 +311,20 @@ theme.loadPlugins = function()
         NeogitDiffDeleteHighlight = { fg = solarized.red },
         NeogitDiffAddHighlight = { fg = solarized.green },
         -- GitGutter
-        GitGutterAdd = { fg = solarized.green }, -- diff mode: Added line |diff.txt|
-        GitGutterChange = { fg = solarized.yellow }, -- diff mode: Changed line |diff.txt|
-        GitGutterDelete = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
+        GitGutterAdd = { fg = solarized.green },      -- diff mode: Added line |diff.txt|
+        GitGutterChange = { fg = solarized.yellow },  -- diff mode: Changed line |diff.txt|
+        GitGutterDelete = { fg = solarized.red },     -- diff mode: Deleted line |diff.txt|
         -- GitSigns
-        GitSignsAdd = { fg = solarized.green }, -- diff mode: Added line |diff.txt|
-        GitSignsAddNr = { fg = solarized.green }, -- diff mode: Added line |diff.txt|
-        GitSignsAddLn = { fg = solarized.green }, -- diff mode: Added line |diff.txt|
-        GitSignsChange = { fg = solarized.yellow }, -- diff mode: Changed line |diff.txt|
+        GitSignsAdd = { fg = solarized.green },       -- diff mode: Added line |diff.txt|
+        GitSignsAddNr = { fg = solarized.green },     -- diff mode: Added line |diff.txt|
+        GitSignsAddLn = { fg = solarized.green },     -- diff mode: Added line |diff.txt|
+        GitSignsChange = { fg = solarized.yellow },   -- diff mode: Changed line |diff.txt|
         GitSignsChangeNr = { fg = solarized.yellow }, -- diff mode: Changed line |diff.txt|
         GitSignsChangeLn = { fg = solarized.yellow }, -- diff mode: Changed line |diff.txt|
-        GitSignsDelete = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
-        GitSignsDeleteNr = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
-        GitSignsDeleteLn = { fg = solarized.red }, -- diff mode: Deleted line |diff.txt|
+        GitSignsDelete = { fg = solarized.red },      -- diff mode: Deleted line |diff.txt|
+        GitSignsDeleteNr = { fg = solarized.red },    -- diff mode: Deleted line |diff.txt|
+        GitSignsDeleteLn = { fg = solarized.red },    -- diff mode: Deleted line |diff.txt|
         GitSignsCurrentLineBlame = { fg = solarized.base01 },
-
         -- Telescope
         TelescopeSelectionCaret = { fg = solarized.blue },
         TelescopeSelection = { fg = solarized.blue, bg = solarized.selection },
@@ -332,17 +335,14 @@ theme.loadPlugins = function()
         TelescopePreviewNormal = { bg = solarized.bg },
         TelescopePreviewTitle = { fg = solarized.cyan },
         TelescopePreviewBorder = { fg = solarized.cyan },
-
         TelescopePromptNormal = { fg = solarized.fg },
         TelescopePromptPrefix = { fg = solarized.green },
         TelescopePromptCounter = { fg = solarized.green },
         TelescopePromptTitle = { fg = solarized.green },
         TelescopePromptBorder = { fg = solarized.green },
-
         -- TelescopeResultsNormal = { bg = bg },
         TelescopeResultsTitle = { fg = solarized.blue },
         TelescopeResultsBorder = { fg = solarized.blue },
-
         -- NvimTree
         NvimTreeRootFolder = { fg = solarized.blue },
         NvimTreeGitDirty = { fg = solarized.fg },
@@ -365,7 +365,6 @@ theme.loadPlugins = function()
         WWhichKeyBorder = { fg = solarized.base01 },
         WhichKeySeparator = { fg = solarized.base01 },
         WhichKeyFloat = { bg = solarized.base02 },
-
         -- LspSaga
         DiagnosticError = { fg = solarized.error },
         DiagnosticWarning = { fg = solarized.warning },
@@ -377,7 +376,6 @@ theme.loadPlugins = function()
         LspSagaBorderTitle = { fg = solarized.cyan },
         LspSagaHoverBorder = { fg = solarized.paleblue },
         LspSagaRenameBorder = { fg = solarized.green },
-
         LspSagaDefPreviewBorder = { fg = solarized.green },
         LspSagaCodeActionBorder = { fg = solarized.blue },
         LspSagaFinderSelection = { fg = solarized.green },
@@ -399,10 +397,8 @@ theme.loadPlugins = function()
         -- Indent Blankline
         IndentBlanklineChar = { fg = solarized.base02 },
         IndentBlanklineContextChar = { fg = solarized.base01 },
-
         -- Noice
         NoiceCursor = { sytle = "reverse" },
-
         -- Nvim dap
         DapBreakpoint = { fg = solarized.magenta },
         DapStopped = { fg = solarized.green },
@@ -428,7 +424,6 @@ theme.loadPlugins = function()
         DapUIModifiedValue = { fg = solarized.green },
         DapUIWatchesHeader = {},
         DapUIWatchesFrame = {},
-
         -- Diffview
         DiffviewFolderSign = { fg = solarized.blue },
         DiffviewFolderName = { fg = solarized.blue },
