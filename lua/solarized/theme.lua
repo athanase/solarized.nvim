@@ -56,6 +56,13 @@ theme.loadSyntax = function()
     syntax.Repeat = { fg = solarized.orange }      -- normal any other keyword
     syntax.Function = { fg = solarized.blue }      -- normal function names
     syntax.Identifier = { fg = solarized.blue }    -- any variable name
+    syntax.cppModifier = { fg = solarized.orange }
+    syntax.cppStructure = { fg = solarized.orange }
+    syntax.cStructure = { fg = solarized.orange }
+    syntax.cppRawString = { fg = solarized.yellow }
+    syntax.cppConstant = { fg = solarized.orange }
+    syntax.cType = { fg = solarized.orange }
+    syntax.cppType = { fg = solarized.magenta }
 
     return syntax
 end
@@ -195,6 +202,7 @@ theme.loadTreeSitter = function()
         ["@exception"] = { fg = solarized.orange },
         ["@field"] = { fg = solarized.cyan },
         ["@lsp.type.property.cpp"] = { fg = solarized.cyan },
+        ["@lsp.type.enumMember.cpp"] = { fg = solarized.green },
         ["@lsp.type.namespace.cpp"] = { fg = solarized.green },
         ["@lsp.type.macro.cpp"] = { fg = solarized.violet },
         ["@float"] = { fg = solarized.red },
@@ -393,7 +401,7 @@ theme.loadPlugins = function()
         -- Hop
         HopNextKey                   = { fg = solarized.magenta },
         HopNextKey1                  = { fg = solarized.green },
-        HopNextKey2                  = { fg = solarized.cyan },
+        HopNextKey2                  = { fg = solarized.green },
         -- Indent Blankline
         IndentBlanklineChar          = { fg = solarized.base02 },
         IndentBlanklineContextChar   = { fg = solarized.base01 },
