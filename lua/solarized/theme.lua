@@ -97,7 +97,7 @@ theme.loadEditor = function()
         PmenuThumb = { fg = solarized.fg, bg = solarized.accent },
         Question = { fg = solarized.green },
         QuickFixLine = { fg = solarized.highlight, bg = solarized.white, style = "reverse" },
-        Search = { fg = solarized.highlight, bg = solarized.white, style = "reverse" },
+        Search = { fg = solarized.highlight, bg = solarized.selection },
         SpecialKey = { fg = solarized.purple },
         SpellBad = { fg = solarized.red, bg = solarized.none, style = "italic,undercurl" },
         SpellCap = { fg = solarized.blue, bg = solarized.none, style = "italic,undercurl" },
@@ -111,7 +111,7 @@ theme.loadEditor = function()
         TablineSel = { fg = solarized.bg, bg = solarized.accent },
         Tabline = { fg = solarized.base02 },
         Title = { fg = solarized.green, bg = solarized.none },
-        Visual = { fg = solarized.none, bg = solarized.selection },
+        Visual = { fg = solarized.none, bg = solarized.base2 },
         VisualNOS = { fg = solarized.none, bg = solarized.selection },
         WarningMsg = { fg = solarized.yellow },
         WildMenu = { fg = solarized.orange, bg = solarized.none },
@@ -268,9 +268,9 @@ theme.loadLSP = function()
         LspDiagnosticsFloatingHint = { fg = solarized.hint },                                     -- used for "Hint" diagnostic messages in the diagnostics float
         LspDiagnosticsVirtualTextHint = { fg = solarized.hint },                                  -- Virtual text "Hint"
         LspDiagnosticsUnderlineHint = { style = "undercurl", sp = solarized.hint },               -- used to underline "Hint" diagnostics.
-        LspReferenceText = { fg = solarized.accent, bg = solarized.highlight },                   -- used for highlighting "text" references
-        LspReferenceRead = { fg = solarized.accent, bg = solarized.highlight },                   -- used for highlighting "read" references
-        LspReferenceWrite = { fg = solarized.accent, bg = solarized.highlight },                  -- used for highlighting "write" references
+        LspReferenceText = { fg = solarized.accent, bg = solarized.none },                        -- used for highlighting "text" references
+        LspReferenceRead = { fg = solarized.accent, bg = solarized.none },                        -- used for highlighting "read" references
+        LspReferenceWrite = { fg = solarized.accent, bg = solarized.none },                       -- used for highlighting "write" references
     }
 
     return lsp
@@ -278,6 +278,8 @@ end
 
 theme.loadPlugins = function()
     local plugins = {
+        TSDefinitionUsage            = { fg = solarized.none, bg = solarized.none },
+
         -- Alpha
         AlphaHeader                  = { fg = solarized.cyan },
         AlphaFooter                  = { fg = solarized.magenta },
@@ -513,6 +515,11 @@ theme.loadPlugins = function()
         NavBuddyEnumMember           = { link = "CmpItemKindEnumMember" },
         NavBuddyOperator             = { link = "CmpItemKindOperator" },
         NavBuddySnippet              = { link = "CmpItemKindSnippet" },
+
+        FlashBackDrop                = { fg = solarized.comments },
+        FlashMatch                   = { fg = solarized.green },
+        FlashCurrent                 = { fg = solarized.green },
+        FlashLabel                   = { fg = solarized.magenta }
     }
 
     -- Options:
