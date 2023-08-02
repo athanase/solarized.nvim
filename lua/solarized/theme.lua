@@ -278,8 +278,6 @@ end
 
 theme.loadPlugins = function()
     local plugins = {
-        TSDefinitionUsage            = { fg = solarized.none, bg = solarized.none },
-
         -- Alpha
         AlphaHeader                  = { fg = solarized.cyan },
         AlphaFooter                  = { fg = solarized.magenta },
@@ -519,7 +517,9 @@ theme.loadPlugins = function()
         FlashBackDrop                = { fg = solarized.comments },
         FlashMatch                   = { fg = solarized.green },
         FlashCurrent                 = { fg = solarized.green },
-        FlashLabel                   = { fg = solarized.magenta }
+        FlashLabel                   = { fg = solarized.magenta },
+
+        CybuFocus                    = { bg = solarized.selection }
     }
 
     -- Options:
