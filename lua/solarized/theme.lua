@@ -92,7 +92,7 @@ theme.loadEditor = function()
         MoreMsg = { fg = solarized.accent },
         NonText = { fg = solarized.base01 },
         Pmenu = { fg = solarized.fg, bg = solarized.none },
-        PmenuSel = { fg = solarized.accent, bg = solarized.active },
+        PmenuSel = { fg = solarized.none, bg = solarized.selection },
         PmenuSbar = { fg = solarized.text, bg = solarized.contrast },
         PmenuThumb = { fg = solarized.fg, bg = solarized.accent },
         Question = { fg = solarized.green },
@@ -519,10 +519,15 @@ theme.loadPlugins = function()
         FlashCurrent                 = { fg = solarized.green },
         FlashLabel                   = { fg = solarized.magenta },
 
-        CybuFocus                    = { bg = solarized.selection }
+        FzfLuaBufName                = { fg = solarized.base00 },
+        FzfLuaBufNr                  = { fg = solarized.base0 },
+        FzfLuaBufLineNr              = { fg = solarized.base00 },
+        FzfLuaBufFlagCur             = { fg = solarized.base0 },
+        FzfLuaBufFlagAlt             = { fg = solarized.base0 },
+        FzfLuaHeaderBind             = { fg = solarized.violet },
+        FzfLuaHeaderText             = { fg = solarized.violet },
+        FzfLuaSearch                 = { fg = solarized.magenta },
     }
-
-    -- Options:
 
     plugins.NvimTreeNormal = { fg = solarized.fg, bg = solarized.none }
 
