@@ -184,6 +184,7 @@ end
 theme.loadTreeSitter = function()
     local treesitter = {
         ["@type.qualifier"] = { fg = solarized.orange },
+        ["@class"] = { fg = solarized.magenta },
         ["@constructor"] = { fg = solarized.blue },
         ["@conditional.ternary"] = { fg = solarized.fg },
         ["@annotation"] = { fg = solarized.yellow },
@@ -491,6 +492,9 @@ theme.loadPlugins = function()
         CmpItemKindEnumMember        = { fg = solarized.cyan },
         CmpItemKindOperator          = { fg = solarized.yellow },
         CmpItemKindSnippet           = { fg = solarized.yellow },
+        CmpItemAbbrMatchFuzzy        = { fg = solarized.magenta },
+        CmpItemAbbrMatch             = { fg = solarized.magenta },
+
         -- NavBuddy
         NavBuddyFunction             = { link = "CmpItemKindFunction" },
         NavBuddyMethod               = { link = "CmpItemKindMethod" },
@@ -527,6 +531,12 @@ theme.loadPlugins = function()
         FzfLuaHeaderBind             = { fg = solarized.violet },
         FzfLuaHeaderText             = { fg = solarized.violet },
         FzfLuaSearch                 = { fg = solarized.magenta },
+
+        OverseerPENDING              = { fg = solarized.blue },
+        OverseerRUNNING              = { fg = solarized.yellow },
+        OverseerSUCCESS              = { fg = solarized.green },
+        OverseerCANCELED             = { fg = solarized.orange },
+        OverseerFAILURE              = { fg = solarized.red },
     }
 
     plugins.NvimTreeNormal = { fg = solarized.fg, bg = solarized.none }
