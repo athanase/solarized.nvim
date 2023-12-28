@@ -158,6 +158,7 @@ theme.loadEditor = function()
     editor.Normal = { fg = solarized.fg, bg = solarized.bg } -- normal text and background color
     editor.SignColumn = { fg = solarized.fg, bg = solarized.bg }
     editor.VertSplit = { fg = solarized.border }
+    editor.WinSeparator = { fg = solarized.base02 }
 
     return editor
 end
