@@ -214,6 +214,8 @@ theme.loadTreeSitter = function()
         ["@function.macro"] = { fg = solarized.violet },
         ["@include"] = { fg = solarized.violet },
         ["@keyword"] = { fg = solarized.orange },
+        ["@keyword.directive"] = { fg = solarized.violet },
+        ["@keyword.import"] = { fg = solarized.violet },
         ["@keyword.function"] = { fg = solarized.blue },
         ["@keyword.operator"] = { fg = solarized.orange },
         ["@label"] = { fg = solarized.orange },
